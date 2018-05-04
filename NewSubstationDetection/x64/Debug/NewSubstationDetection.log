@@ -1,0 +1,110 @@
+﻿生成启动时间为 2018/4/27 星期五 18:43:25。
+     1>项目“F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\NewSubstationDetection\NewSubstationDetection.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Debug\NewSubstationDetection.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“x64\Debug\NewSubstationDetection.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         e:\software_new\vs_2010_install\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"x64\Debug\NewSubstationDetection.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         e:\software_new\vs_2010_install\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Debug\NewSubstationDetection.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt changeColor.cpp CvvImage.cpp dataBaseUtils.cpp NewSubstationDetection.cpp NewSubstationDetectionDlg.cpp WinsockMatTransmissionClient.cpp Utils.cpp WinsockMatTransmissionClient_1.cpp
+         WinsockMatTransmissionClient_1.cpp
+     1>WinsockMatTransmissionClient_1.cpp(44): warning C4244: “=”: 从“SOCKET”转换到“int”，可能丢失数据
+     1>WinsockMatTransmissionClient_1.cpp(46): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\string.h(157) : 参见“strerror”的声明
+     1>WinsockMatTransmissionClient_1.cpp(62): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\string.h(157) : 参见“strerror”的声明
+     1>WinsockMatTransmissionClient_1.cpp(141): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\string.h(157) : 参见“strerror”的声明
+         Utils.cpp
+     1>e:\software_new\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>Utils.cpp(43): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>Utils.cpp(51): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>Utils.cpp(79): warning C4172: 返回局部变量或临时变量的地址
+         WinsockMatTransmissionClient.cpp
+     1>WinsockMatTransmissionClient.cpp(44): warning C4244: “=”: 从“SOCKET”转换到“int”，可能丢失数据
+     1>WinsockMatTransmissionClient.cpp(46): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\string.h(157) : 参见“strerror”的声明
+     1>WinsockMatTransmissionClient.cpp(62): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\string.h(157) : 参见“strerror”的声明
+     1>WinsockMatTransmissionClient.cpp(168): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\string.h(157) : 参见“strerror”的声明
+         NewSubstationDetectionDlg.cpp
+     1>e:\software_new\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>NewSubstationDetectionDlg.cpp(337): warning C4101: “szText”: 未引用的局部变量
+     1>NewSubstationDetectionDlg.cpp(437): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(438): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(448): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(449): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(461): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(462): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(653): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(654): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(690): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(691): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(725): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(726): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(904): warning C4244: “初始化”: 从“int64”转换到“double”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1026): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1098): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1098): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1108): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1108): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1118): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>NewSubstationDetectionDlg.cpp(1118): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+         NewSubstationDetection.cpp
+     1>e:\software_new\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\stdio.h(234) : 参见“fopen”的声明
+         dataBaseUtils.cpp
+     1>e:\software_new\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\software_new\vs_2010_install\VC\include\stdio.h(234) : 参见“fopen”的声明
+         CvvImage.cpp
+         changeColor.cpp
+         Generating Code...
+     1>f:\代码备份\项目代码备份_2018\newsubstationdetection_04_06\newsubstationdetection\winsockmattransmissionclient.cpp(172): warning C4715: “WinsockMatTransmissionClient::transmit”: 不是所有的控件路径都返回值
+     1>f:\代码备份\项目代码备份_2018\newsubstationdetection_04_06\newsubstationdetection\winsockmattransmissionclient_1.cpp(145): warning C4715: “WinsockMatTransmissionClient_1::transmit”: 不是所有的控件路径都返回值
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /Ix64\Debug\ /nologo /fo"x64\Debug\NewSubstationDetection.res" NewSubstationDetection.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"x64\Debug\NewSubstationDetection.exe.embed.manifest.res" x64\Debug\NewSubstationDetection_manifest.rc 
+       Link:
+         e:\software_new\vs_2010_install\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.exe" /INCREMENTAL /NOLOGO libmysql.lib opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib opencv_nonfree2410d.lib opencv_objdetect2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_ts2410d.lib opencv_video2410d.lib opencv_videostab2410d.lib opencv_calib3d2410.lib opencv_contrib2410.lib opencv_core2410.lib opencv_features2d2410.lib opencv_flann2410.lib opencv_gpu2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib opencv_legacy2410.lib opencv_ml2410.lib opencv_nonfree2410.lib opencv_objdetect2410.lib opencv_ocl2410.lib opencv_photo2410.lib opencv_stitching2410.lib opencv_superres2410.lib opencv_ts2410.lib opencv_video2410.lib opencv_videostab2410.lib /MANIFEST /ManifestFile:"x64\Debug\NewSubstationDetection.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.lib" /MACHINE:X64 x64\Debug\NewSubstationDetection.res
+         x64\Debug\NewSubstationDetection.exe.embed.manifest.res
+         x64\Debug\changeColor.obj
+         x64\Debug\CvvImage.obj
+         x64\Debug\dataBaseUtils.obj
+         x64\Debug\NewSubstationDetection.obj
+         x64\Debug\NewSubstationDetectionDlg.obj
+         x64\Debug\WinsockMatTransmissionClient.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\Utils.obj
+         x64\Debug\WinsockMatTransmissionClient_1.obj
+         NewSubstationDetection.vcxproj -> F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.exe
+       Manifest:
+         正在删除文件“x64\Debug\NewSubstationDetection.exe.embed.manifest”。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"x64\Debug\NewSubstationDetection.exe.embed.manifest" /manifest x64\Debug\NewSubstationDetection.exe.intermediate.manifest e:\software_new\vs_2010_install\VC\Include\Manifest\dpiaware.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"x64\Debug\NewSubstationDetection.exe.embed.manifest.res" x64\Debug\NewSubstationDetection_manifest.rc 
+       LinkEmbedManifest:
+         e:\software_new\vs_2010_install\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.exe" /INCREMENTAL /NOLOGO libmysql.lib opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib opencv_nonfree2410d.lib opencv_objdetect2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_ts2410d.lib opencv_video2410d.lib opencv_videostab2410d.lib opencv_calib3d2410.lib opencv_contrib2410.lib opencv_core2410.lib opencv_features2d2410.lib opencv_flann2410.lib opencv_gpu2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib opencv_legacy2410.lib opencv_ml2410.lib opencv_nonfree2410.lib opencv_objdetect2410.lib opencv_ocl2410.lib opencv_photo2410.lib opencv_stitching2410.lib opencv_superres2410.lib opencv_ts2410.lib opencv_video2410.lib opencv_videostab2410.lib /MANIFEST /ManifestFile:"x64\Debug\NewSubstationDetection.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.lib" /MACHINE:X64 x64\Debug\NewSubstationDetection.res
+         x64\Debug\NewSubstationDetection.exe.embed.manifest.res
+         x64\Debug\changeColor.obj
+         x64\Debug\CvvImage.obj
+         x64\Debug\dataBaseUtils.obj
+         x64\Debug\NewSubstationDetection.obj
+         x64\Debug\NewSubstationDetectionDlg.obj
+         x64\Debug\WinsockMatTransmissionClient.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\Utils.obj
+         x64\Debug\WinsockMatTransmissionClient_1.obj
+         NewSubstationDetection.vcxproj -> F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\x64\Debug\NewSubstationDetection.exe
+       FinalizeBuildStatus:
+         正在删除文件“x64\Debug\NewSubstationDetection.unsuccessfulbuild”。
+         正在对“x64\Debug\NewSubstationDetection.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\代码备份\项目代码备份_2018\NewSubstationDetection_04_06\NewSubstationDetection\NewSubstationDetection.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:19.87

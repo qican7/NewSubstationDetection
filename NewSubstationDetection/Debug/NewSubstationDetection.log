@@ -1,0 +1,127 @@
+﻿生成启动时间为 2017/6/28 11:57:41。
+项目“E:\代码备份\NewSubstationDetection_06_26\NewSubstationDetection\NewSubstationDetection.vcxproj”在节点 2 上(rebuild 个目标)。
+_PrepareForClean:
+  正在删除文件“Debug\NewSubstationDetection.lastbuildstate”。
+InitializeBuildStatus:
+  正在创建“Debug\NewSubstationDetection.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\NewSubstationDetection.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+  stdafx.cpp
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\NewSubstationDetection.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt changeColor.cpp CvvImage.cpp dataBaseUtils.cpp NewSubstationDetection.cpp NewSubstationDetectionDlg.cpp WinsockMatTransmissionClient.cpp Utils.cpp WinsockMatTransmissionClient_1.cpp
+  WinsockMatTransmissionClient_1.cpp
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient_1.cpp(46): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\string.h(157) : 参见“strerror”的声明
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient_1.cpp(62): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\string.h(157) : 参见“strerror”的声明
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient_1.cpp(130): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\string.h(157) : 参见“strerror”的声明
+  Utils.cpp
+f:\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
+          f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\utils.cpp(43): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\utils.cpp(51): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\utils.cpp(79): warning C4172: 返回局部变量或临时变量的地址
+  WinsockMatTransmissionClient.cpp
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient.cpp(46): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\string.h(157) : 参见“strerror”的声明
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient.cpp(62): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\string.h(157) : 参见“strerror”的声明
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient.cpp(167): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\string.h(157) : 参见“strerror”的声明
+  NewSubstationDetectionDlg.cpp
+f:\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
+          f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(365): warning C4101: “szText”: 未引用的局部变量
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(468): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(469): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(479): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(480): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(491): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(492): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(688): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(689): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(690): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(695): warning C4305: “参数”: 从“double”到“float”截断
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(699): warning C4305: “参数”: 从“double”到“float”截断
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(720): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(721): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(722): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(726): warning C4305: “参数”: 从“double”到“float”截断
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(746): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(747): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(748): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(752): warning C4305: “参数”: 从“double”到“float”截断
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(906): warning C4244: “初始化”: 从“int64”转换到“double”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(941): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(952): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1028): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1116): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1118): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1118): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1126): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1128): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1128): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1136): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1138): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\newsubstationdetectiondlg.cpp(1138): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  NewSubstationDetection.cpp
+f:\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
+          f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
+  dataBaseUtils.cpp
+f:\opencv\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
+          f:\opencv\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
+  CvvImage.cpp
+  changeColor.cpp
+  正在生成代码...
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient.cpp(171): warning C4715: “WinsockMatTransmissionClient::transmit”: 不是所有的控件路径都返回值
+e:\代码备份\newsubstationdetection_06_26\newsubstationdetection\winsockmattransmissionclient_1.cpp(134): warning C4715: “WinsockMatTransmissionClient_1::transmit”: 不是所有的控件路径都返回值
+ResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\NewSubstationDetection.res" NewSubstationDetection.rc 
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\NewSubstationDetection.exe.embed.manifest.res" Debug\NewSubstationDetection_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\MySQL\MySQL Server 5.7\lib" libmysql.lib opencv_calib3d231d.lib opencv_contrib231d.lib opencv_core231d.lib opencv_features2d231d.lib opencv_flann231d.lib opencv_gpu231d.lib opencv_highgui231d.lib opencv_imgproc231d.lib opencv_legacy231d.lib opencv_ml231d.lib opencv_objdetect231d.lib opencv_ts231d.lib opencv_video231d.lib /MANIFEST /ManifestFile:"Debug\NewSubstationDetection.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.lib" /MACHINE:X86 Debug\NewSubstationDetection.res
+  Debug\NewSubstationDetection.exe.embed.manifest.res
+  Debug\changeColor.obj
+  Debug\CvvImage.obj
+  Debug\dataBaseUtils.obj
+  Debug\NewSubstationDetection.obj
+  Debug\NewSubstationDetectionDlg.obj
+  Debug\WinsockMatTransmissionClient.obj
+  Debug\stdafx.obj
+  Debug\Utils.obj
+  Debug\WinsockMatTransmissionClient_1.obj
+Manifest:
+  正在删除文件“Debug\NewSubstationDetection.exe.embed.manifest”。
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\NewSubstationDetection.exe.embed.manifest" /manifest Debug\NewSubstationDetection.exe.intermediate.manifest "C:\Program Files\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\NewSubstationDetection.exe.embed.manifest.res" Debug\NewSubstationDetection_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\MySQL\MySQL Server 5.7\lib" libmysql.lib opencv_calib3d231d.lib opencv_contrib231d.lib opencv_core231d.lib opencv_features2d231d.lib opencv_flann231d.lib opencv_gpu231d.lib opencv_highgui231d.lib opencv_imgproc231d.lib opencv_legacy231d.lib opencv_ml231d.lib opencv_objdetect231d.lib opencv_ts231d.lib opencv_video231d.lib /MANIFEST /ManifestFile:"Debug\NewSubstationDetection.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.lib" /MACHINE:X86 Debug\NewSubstationDetection.res
+  Debug\NewSubstationDetection.exe.embed.manifest.res
+  Debug\changeColor.obj
+  Debug\CvvImage.obj
+  Debug\dataBaseUtils.obj
+  Debug\NewSubstationDetection.obj
+  Debug\NewSubstationDetectionDlg.obj
+  Debug\WinsockMatTransmissionClient.obj
+  Debug\stdafx.obj
+  Debug\Utils.obj
+  Debug\WinsockMatTransmissionClient_1.obj
+  NewSubstationDetection.vcxproj -> E:\代码备份\NewSubstationDetection_06_26\Debug\NewSubstationDetection.exe
+FinalizeBuildStatus:
+  正在删除文件“Debug\NewSubstationDetection.unsuccessfulbuild”。
+  正在对“Debug\NewSubstationDetection.lastbuildstate”执行 Touch 任务。
+已完成生成项目“E:\代码备份\NewSubstationDetection_06_26\NewSubstationDetection\NewSubstationDetection.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:44.39
