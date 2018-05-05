@@ -38,7 +38,6 @@
 		char buf_1[BUFFER_SIZE];
 		char buf_2[BUFFER_SIZE];
         int flag;  
-		int position;
 		string deviceType;
 		int x;
 		int y;
@@ -50,12 +49,7 @@
 		float diffTemp;
 		float speed;
 		int level ;
-		int year;
-		int month;
-		int day;
-		int hour;
-		int minute;
-		int second;
+        string detectTime;
 		
     };  
       
@@ -85,7 +79,7 @@
         // return : -1      传输失败  
         //          1       传输成功  
         //int transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,char* name,float temp,char* positionTemp);  
-		int transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,int position,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, int year,int month,int day,int hour,int minute,int second);
+		int transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, string detectTime);
       
         // 断开socket连接  
         void socketDisconnect(void);  

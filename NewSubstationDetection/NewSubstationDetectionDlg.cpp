@@ -67,6 +67,15 @@ float last_firstTemp  = -1;
 float last_secondTemp = -1;
 float last_thirdTemp  = -1;
 
+//参数
+string deviceType = "breaker";
+float areaMaxTemp = 0;  //最高温度
+float areaAvgTemp = 0;  //平均温度
+float referDiffTemp = 0; //相对温差
+float enviTemp = 25;   //环境温度
+float referTemp = 26;  //参考温度
+float tempUpSpeed = -1000;
+
 
 //配准参数
 int PeiZhun_flag = 1;
@@ -169,18 +178,18 @@ BOOL CNewSubstationDetectionDlg::OnInitDialog()
 	// TODO: 在此添加额外的初始化代码
 
 	//连接服务器
-	//int type =0;
-	//if ((type = socketMat.socketConnect("127.0.0.1", 6666) )< 0)  
-	//{  
-	//	AfxMessageBox(intToCString(type));
-	//	return FALSE;  
-	//}
+	int type =0;
+	if ((type = socketMat.socketConnect("127.0.0.1", 6666) )< 0)  
+	{  
+		AfxMessageBox(intToCString(type));
+		return FALSE;  
+	}
 
-	//if ((type =socketMat_transVideo.socketConnect("127.0.0.1", 6667)) < 0)  
-	//{  
-	//	AfxMessageBox(intToCString(type));
-	//	return FALSE;  
-	//}
+	if ((type =socketMat_transVideo.socketConnect("127.0.0.1", 6667)) < 0)  
+	{  
+		AfxMessageBox(intToCString(type));
+		return FALSE;  
+	}
 
 	//获取红外和可见光的变换矩阵
 	IplImage* infraredImage_H = cvLoadImage("infraredImage_H.jpg");
@@ -210,7 +219,7 @@ BOOL CNewSubstationDetectionDlg::OnInitDialog()
 	m_list.InsertColumn(7, _T("环境温度(°C)"), LVCFMT_CENTER, rect.Width()/12, 7);
 	m_list.InsertColumn(8, _T("相对温差(%)"), LVCFMT_CENTER, rect.Width()/12, 8);
 	m_list.InsertColumn(9, _T("温升速度(°C/s)"), LVCFMT_CENTER, rect.Width()/12, 9);
-	m_list.InsertColumn(10, _T("缺陷等级"), LVCFMT_CENTER, rect.Width()/12, 10);
+	m_list.InsertColumn(10, _T("异常类型"), LVCFMT_CENTER, rect.Width()/12, 10);
 	m_list.InsertColumn(11, _T("监测时间"), LVCFMT_CENTER, rect.Width()*3/24, 11);
 
 	////创建并启动线程 
@@ -535,7 +544,7 @@ void CNewSubstationDetectionDlg::detectAbnormalArea(IplImage* grayImage,IplImage
 	}
 	IplImage* lightImage_1 = PeiZhun(lightImage,firstType,secondType,thirdType);
 
-	cvSaveImage("lightImage.jpg",lightImage_1);
+	//cvSaveImage("lightImage.jpg",lightImage_1);
 
 	//需要传送的红外原图
 	transColorImage = cvCloneImage(colorImage);
@@ -565,7 +574,7 @@ void CNewSubstationDetectionDlg::detectAbnormalArea(IplImage* grayImage,IplImage
 		}
 	}
 
-	cvSaveImage("colorImage_3.jpg",colorImage);
+	//cvSaveImage("colorImage_3.jpg",colorImage);
 
 	
 	//设置检测区域标记
@@ -609,25 +618,20 @@ void CNewSubstationDetectionDlg::detectAbnormalArea(IplImage* grayImage,IplImage
 
 	//cvShowImage("colorImage",colorImage);
 
-	float areaMaxTemp = 0;  //最高温度
-	float areaAvgTemp = 0;  //平均温度
-	float referDiffTemp = 0; //相对温差
-	float enviTemp = 25;   //环境温度
-	float referTemp = 26;  //参考温度
-	float tempUpSpeed = -1000;
+
 
 	CTime tm = CTime::GetCurrentTime();
-	CString Time = tm.Format("%Y-%m-%d-%H-%M-%S");
+	CString detectTime = tm.Format("%Y-%m-%d-%H-%M-%S");
 	//获取时间，存入数据库
-	int year = tm.GetYear(); ///年
-	int month = tm.GetMonth(); ///月  
-	int day = tm.GetDay(); ///日
-	int hour = tm.GetHour(); //时
-	int minute = tm.GetMinute(); //分
-	int second = tm.GetSecond(); //秒
+	//int year = tm.GetYear(); ///年
+	//int month = tm.GetMonth(); ///月  
+	//int day = tm.GetDay(); ///日
+	//int hour = tm.GetHour(); //时
+	//int minute = tm.GetMinute(); //分
+	//int second = tm.GetSecond(); //秒
 
-	CString detectTime = intToCString(year) + "-" +intToCString(month)+ "-" +intToCString(day) 
-		+ "-" +intToCString(hour)+ "-" +intToCString(minute)+ "-" +intToCString(second);
+	//CString detectTime = intToCString(year) + "-" +intToCString(month)+ "-" +intToCString(day) 
+	//	+ "-" +intToCString(hour)+ "-" +intToCString(minute)+ "-" +intToCString(second);
 
 
 	
@@ -663,10 +667,10 @@ void CNewSubstationDetectionDlg::detectAbnormalArea(IplImage* grayImage,IplImage
 						}
 						
 						//insertIntoList(i,j,AbnormalDimension[0],areaMinTemp,areaMaxTemp,areaAvgTemp,m_abnormalDeviceTemp,referDiffTemp,0);
-						insertIntoList(_T("变压器"), center_x,center_y,AbnormalDimension[0],areaMaxTemp,areaAvgTemp,Save2Float(referTemp),Save2Float(enviTemp), referDiffTemp,tempUpSpeed,0,detectTime);
+						insertIntoList(stringToCString(deviceType), center_x,center_y,AbnormalDimension[0],areaMaxTemp,areaAvgTemp,Save2Float(referTemp),Save2Float(enviTemp), referDiffTemp,tempUpSpeed,0,detectTime);
 						//传输数据
 						//参数分别为：红外原图 红外异常检测图 可见光配准图 监测位置 区域中心x 区域中心y 区域面积 最低温度 最高温度 平均温度 参考温度 相对温差 温升速度 缺陷等级
-						socketMat.transmit(IplImageToMat(transColorImage),IplImageToMat(colorImage_detect),IplImageToMat(lightImage_1),1,"breaker",center_x,center_y,AbnormalDimension[0],areaMaxTemp,areaAvgTemp,referTemp,enviTemp,referDiffTemp,referDiffTemp,0,year,month,day,hour,minute,second); 
+						socketMat.transmit(IplImageToMat(transColorImage),IplImageToMat(colorImage_detect),IplImageToMat(lightImage_1),deviceType,center_x,center_y,AbnormalDimension[0],areaMaxTemp,areaAvgTemp,referTemp,enviTemp,referDiffTemp,referDiffTemp,0,CStringToString(detectTime)); 
 						//AfxMessageBox(intToCString(i)+_T(" ")+intToCString(j));
 						//AfxMessageBox(intToCString(i)+_T(" ")+intToCString(j));
 						//AfxMessageBox(_T("AbnormalDimension[0]")+intToCString(AbnormalDimension[0])); 
@@ -703,6 +707,7 @@ void CNewSubstationDetectionDlg::detectAbnormalArea(IplImage* grayImage,IplImage
 						insertIntoList(_T("变压器"), center_x,center_y,AbnormalDimension[0],areaMaxTemp,areaAvgTemp,Save2Float(referTemp),Save2Float(enviTemp), referDiffTemp,tempUpSpeed,1,detectTime);
 						//传输数据
 						//参数分别为：红外原图 红外异常检测图 可见光配准图 监测位置 区域中心x 区域中心y 区域面积 最低温度 最高温度 平均温度 参考温度 相对温差 温升速度 缺陷等级
+						socketMat.transmit(IplImageToMat(transColorImage),IplImageToMat(colorImage_detect),IplImageToMat(lightImage_1),deviceType,center_x,center_y,AbnormalDimension[1],areaMaxTemp,areaAvgTemp,referTemp,enviTemp,referDiffTemp,referDiffTemp,1,CStringToString(detectTime)); 
 						//socketMat.transmit(IplImageToMat(transColorImage),IplImageToMat(colorImage_2),IplImageToMat(lightImage_1),1,"breaker",i,j,AbnormalDimension[0],areaMinTemp,areaMaxTemp,areaAvgTemp,25.0,referDiffTemp,0.2,1); 
 						//AfxMessageBox(intToCString(i)+_T(" ")+intToCString(j));
 						//AfxMessageBox(_T("AbnormalDimension[1]")+intToCString(AbnormalDimension[1]));
@@ -737,7 +742,8 @@ void CNewSubstationDetectionDlg::detectAbnormalArea(IplImage* grayImage,IplImage
 						//insertIntoList(i,j,AbnormalDimension[0],areaMinTemp,areaMaxTemp,areaAvgTemp,m_abnormalDeviceTemp,referDiffTemp,0);
 						insertIntoList(_T("变压器"), center_x,center_y,AbnormalDimension[0],areaMaxTemp,areaAvgTemp,Save2Float(referTemp),Save2Float(enviTemp), referDiffTemp,tempUpSpeed,2,detectTime);
 						//传输数据
-						//参数分别为：红外原图 红外异常检测图 可见光配准图 监测位置 区域中心x 区域中心y 区域面积 最低温度 最高温度 平均温度 参考温度 相对温差 温升速度 缺陷等级
+						//参数分别为：红外原图 红外异常检测图 可见光配准图  区域中心x 区域中心y 异常面积 最高温度  平均温度 参考温度  环境温度 相对温差 温升速度 异常类型 检测时间
+						socketMat.transmit(IplImageToMat(transColorImage),IplImageToMat(colorImage_detect),IplImageToMat(lightImage_1),deviceType,center_x,center_y,AbnormalDimension[2],areaMaxTemp,areaAvgTemp,referTemp,enviTemp,referDiffTemp,referDiffTemp,2,CStringToString(detectTime)); 
 						//socketMat.transmit(IplImageToMat(transColorImage),IplImageToMat(colorImage_2),IplImageToMat(lightImage_1),1,"breaker",i,j,AbnormalDimension[0],areaMinTemp,areaMaxTemp,areaAvgTemp,25.0,referDiffTemp,0.2,2,year,month,day,hour,minute,second); 
 						//socketMat.transmit(IplImageToMat(colorImage),IplImageToMat(lightImage_1),"qican",areaMaxTemp,CStringToChar(path)); 
 						//AfxMessageBox(intToCString(i)+_T(" ")+intToCString(j));

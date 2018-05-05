@@ -14,12 +14,17 @@ using namespace cv;
 //数据类型转换
 extern CString intToCString(int data);
 extern CString floatToCString(float data);
+extern CString stringToCString(string data);
+extern CString Save2Float(float data); //float数据保留两位小数
+
+
 
 extern char* CStringToChar(CString data);
 extern char* CStringToChar_1(CString data);
 extern int CStringToInt(CString data);
 extern float CStringToFloat(CString data);
-extern CString Save2Float(float data); //float数据保留两位小数
+extern string CStringToString(CString data);
+
 
 
 

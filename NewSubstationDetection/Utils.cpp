@@ -16,6 +16,13 @@ CString floatToCString(float data){
 
 }
 
+CString stringToCString(string data){
+	
+	CString t(data.c_str());
+	return t;
+
+}
+
 char* CStringToChar(CString data){
 
 	char *data1 = new char[100];
@@ -52,6 +59,13 @@ extern CString Save2Float(float data){
 	return (CString)data_1;
 }
 
+
+string CStringToString(CString data){
+
+	string s = CT2CA(data.GetBuffer(0));
+	return s;
+
+}
 
 
 //²ÊÉ«×ª»Ò¶È

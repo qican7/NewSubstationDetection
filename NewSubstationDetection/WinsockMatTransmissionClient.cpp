@@ -2,7 +2,7 @@
     // 
     //  基于OpenCV和Winsock的图像传输（发送） 
     //   
-    //  By 彭曾 , at CUST, 2016.08.06  
+    //  By 漆灿 , at CUST, 2017.08.06  
     // 
     //  website: www.pengz0807.com  email: pengz0807@163.com  
     //   
@@ -27,7 +27,7 @@
         WORD wVersionRequested;  
         WSADATA wsaData;  
         int err;  
-       picCount = 0;
+        picCount = 0;
         wVersionRequested = MAKEWORD( 1, 1 );  
       
         err = WSAStartup( wVersionRequested, &wsaData );  
@@ -76,7 +76,7 @@
         WSACleanup();  
     }  
       
-    int WinsockMatTransmissionClient::transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,int position,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, int year,int month,int day,int hour,int minute,int second)
+    int WinsockMatTransmissionClient::transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, string detectTime)
     {  
 		//data.name = new char[10];
 		//data.name = nameString;
@@ -137,7 +137,6 @@
 				//std::cout<<positionTemp<<" "<<strlen(positionTemp)<<std::endl;
 				/*picCount ++;
 				printf("%d\n",picCount); */
-				data.position = position;
 				data.deviceType = deviceType;
                 data.x = x;
 				data.y = y;
@@ -149,12 +148,7 @@
 				data.diffTemp = diffTemp;
 				data.speed = speed;
 				data.level = level;
-				data.year = year;
-				data.month = month;
-				data.day = day;
-				data.hour = hour;
-				data.minute = minute;
-				data.second = second;
+			    data.detectTime = detectTime;
 				data.flag = 2;  //结束的标志，图像分为40次进行传输
 				
 			} 
