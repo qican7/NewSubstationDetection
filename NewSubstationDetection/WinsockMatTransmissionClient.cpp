@@ -76,7 +76,7 @@
         WSACleanup();  
     }  
       
-    int WinsockMatTransmissionClient::transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, string detectTime)
+    int WinsockMatTransmissionClient::transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, string detectDate, string detectTime)
     {  
 		//data.name = new char[10];
 		//data.name = nameString;
@@ -148,6 +148,7 @@
 				data.diffTemp = diffTemp;
 				data.speed = speed;
 				data.level = level;
+				data.detectDate = detectDate;
 			    data.detectTime = detectTime;
 				data.flag = 2;  //结束的标志，图像分为40次进行传输
 				

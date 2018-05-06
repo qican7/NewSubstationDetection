@@ -49,6 +49,7 @@
 		float diffTemp;
 		float speed;
 		int level ;
+		string detectDate;
         string detectTime;
 		
     };  
@@ -79,7 +80,7 @@
         // return : -1      传输失败  
         //          1       传输成功  
         //int transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,char* name,float temp,char* positionTemp);  
-		int transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, string detectTime);
+		int transmit(cv::Mat image,cv::Mat image_1,cv::Mat image_2,string deviceType, int x,int y,int abnormalDimension,float areaMaxTemp,float areaAvgTemp,float referTemp,float enviTemp, float diffTemp,float speed,int level, string detectDate,string detectTime);
       
         // 断开socket连接  
         void socketDisconnect(void);  
